@@ -1,0 +1,19 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position:relative;
+
+  z-index: 99;
+}
+.main__text{
+  letter-spacing: 2px;
+}
+.main__text--highlight {
+  font-size: 20rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(157, 155, 155);
+}

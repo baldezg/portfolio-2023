@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700;1,900&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap');
+
+  /* 
+font-family: 'Lato', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+ */
+
+/* icons size 18px x 18px or 24x24px 
+  40 a 60 characters per line
+  20  a 40 para linhas curtas
+  headlines de no máximo 6 palavras
+  =========ESPAÇAMENTOS========
+  subtitles e inputs = 8px
+  title, divisores, paragraphos = 16px
+  botoes, forms, cards = 24px
+  seções e divisores de tela = 32px
+
+  para elementos clicaveis como iconese e links colocar bordas e um padding de 8px para aumentar a area clicável.
+*/
+
+:root {
+  /* typography */
+  --line-height-p: 1.5em;
+  --line-height-heading: 1.4em;
+  --font-size-p-regular: 1.14rem; 
+  --font-size-p-bold: .9rem;
+
+  /* icons */
+  --icon-small: 1.14rem;
+  --icon-big: 1.5rem;
+
+  /* colors */
+  --primary-color: #72DDF7;
+  --second-color: #86C3DF;
+  --tertiary-color: #142332;
+  --bg: #f4f4ed;
+  --bg-azure: #D6E8EE;
+  --black: #0E0F0F;
+  --color-sec: #F10707;
+  --color-ter: #0E85D0
+}
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  /* background: #f7f7f7; */
+  /* background: #F7EC59;
+  color: #1F271c; */
+  font-family: 'Lato', sans-serif;
+ 
+}

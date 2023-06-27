@@ -1,0 +1,15 @@
+.skills{
+    display:flex;
+    margin: 0.2rem;
+    justify-content: space-around;
+    position: relative;
+    
+}
+.skills__title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.skills__container > h2{
+    margin-bottom: 1rem;
+    
+}
