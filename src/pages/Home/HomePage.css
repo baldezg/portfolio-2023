@@ -1,32 +1,33 @@
-.main {
+.hero__section{
   display: flex;
   justify-content: space-evenly;
-  height: 90vh;
   padding: 2rem;
 }
+
 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  
 }
 .presentation__name {
-  font-family: "Playfair Display", serif;
   color: var(--black);
   font-weight: 900;
   font-size: 3rem;
+  line-height: var(--line-height-heading);
 }
-.text__description h3 {
+.text__description {
   line-height: var(--line-height-heading);
   font-weight: 400;
 }
 .text__description h2 {
   color: var(--black);
-  font-family: "Lato", sans-serif;
   line-height: var(--line-height-heading);
 }
 h2 span{
   color: var(--color-sec);
+  /* font-size: 3rem; */
 }
 .vector {
   height: 100%;
@@ -45,7 +46,8 @@ h2 span{
 .button__container button {
   border: none;
   background: none;
-  font-size: var(--font-size-p-bold);
+  /* font-size: var(--font-size-p-bold); */
+  font-size: 1rem;
   font-weight: bold; 
 }
 .button__container::after{
@@ -77,4 +79,24 @@ h2 span{
 .button__container:hover .arrow__div{
   box-shadow: inset 2.5em 0 0 0 var(--black);
   color: var(--bg);
+}
+.socials{
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+
+}
+.social__logo svg{
+  height: var(--icon-big);
+  aspect-ratio: 1;
+  color: var(--black);
+}
+.presentation__whatIdo{
+  color: var(--black);
+  font-size: 2rem;
+}
+.name{
+  font-family: 'Ginger';
+  font-size: 4rem;
 }

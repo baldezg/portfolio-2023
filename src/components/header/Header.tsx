@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './Header.css';
-import { LinkedinLogo, GithubLogo } from '../../icons';
 import logo from '../../assets/img/logo.png';
 
 type Props = {

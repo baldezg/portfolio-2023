@@ -1,7 +1,18 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700;1,900&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700;1,900&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap');
 
+@font-face {
+  font-family: 'Ginger';
+  src: url('./assets/fonts/Ginger.woff') format('woff'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PPNeueMontreal-Medium';
+  src:url('./assets/fonts/PPNeueMontreal-Medium.otf') format('opentype');
+}
   /* 
 font-family: 'Lato', sans-serif;
 font-family: 'Libre Baskerville', serif;
@@ -25,19 +36,21 @@ font-family: 'Playfair Display', serif;
 :root {
   /* typography */
   --line-height-p: 1.5em;
-  --line-height-heading: 1.4em;
+  --line-height-heading: 2em;
   --font-size-p-regular: 1.14rem; 
   --font-size-p-bold: .9rem;
 
   /* icons */
   --icon-small: 1.14rem;
-  --icon-big: 1.5rem;
+  --icon-big: 5rem;
 
   /* colors */
   --primary-color: #72DDF7;
   --second-color: #86C3DF;
   --tertiary-color: #142332;
-  --bg: #f4f4ed;
+  --bg:#f4f4ed; 
+  /* #f4f4ed; */
+  /* yellow: #F7EC59; */
   --bg-azure: #D6E8EE;
   --black: #0E0F0F;
   --color-sec: #F10707;
@@ -55,9 +68,9 @@ html {
 }
 body {
   background: var(--bg);
-  /* background: #f7f7f7; */
-  /* background: #F7EC59;
-  color: #1F271c; */
-  font-family: 'Lato', sans-serif;
- 
+  /* color: #1F271c;  */
+  font-family: 'PPNeueMontreal-Medium';
+}
+a{
+  color: var(--black);
 }

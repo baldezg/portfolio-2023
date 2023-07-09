@@ -6,7 +6,12 @@ type IconProps = {
 };
 export const LinkedinLogo: React.FC<IconProps> = ({ className }) => {
   return (
-    <Link to="https://www.linkedin.com/in/baldezg/" className={className}>
+    <a
+      href="https://www.linkedin.com/in/baldezg/"
+      target="_blank"
+      className={className}
+      rel="noreferrer"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         // xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -17,13 +22,18 @@ export const LinkedinLogo: React.FC<IconProps> = ({ className }) => {
           fill="currentColor"
         ></path>
       </svg>
-    </Link>
+    </a>
   );
 };
 
 export const GithubLogo: React.FC<IconProps> = ({ className }) => {
   return (
-    <Link to="https://github.com/baldezg" className={className}>
+    <a
+      href="https://github.com/baldezg"
+      target="_blank"
+      rel="noreferrer"
+      className={className}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         // xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -34,7 +44,7 @@ export const GithubLogo: React.FC<IconProps> = ({ className }) => {
           fill="currentColor"
         ></path>
       </svg>
-    </Link>
+    </a>
   );
 };
 
@@ -54,11 +64,63 @@ export const Envelope: React.FC<IconProps> = ({ className }) => {
     </Link>
   );
 };
-export const Chevron: React.FC<IconProps> = ({ className }) =>{
-  return(
-    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M9 6l6 6l-6 6"></path>
-</svg>
-  )
-}
+export const Chevron: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-chevron-right"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M9 6l6 6l-6 6"></path>
+    </svg>
+  );
+};
+export const Plus: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-plus"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 5l0 14"></path>
+      <path d="M5 12l14 0"></path>
+    </svg>
+  );
+};
+export const LinkIcon: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-external-link"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+      <path d="M11 13l9 -9"></path>
+      <path d="M15 4h5v5"></path>
+    </svg>
+  );
+};

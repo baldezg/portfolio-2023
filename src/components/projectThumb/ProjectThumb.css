@@ -1,0 +1,17 @@
+.thumbnail{
+    height: 18.75rem;
+    width: 25rem;
+    background-image: url('../../assets/img/mockup.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.thumbnail__link{
+    background: var(--bg);
+    padding: .5rem 1rem;
+    font-weight: 900;
+    color: var(--black);
+    border: solid var(--black);
+    font-family: 'Ginger';
+}
