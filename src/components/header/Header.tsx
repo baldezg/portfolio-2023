@@ -19,12 +19,10 @@ const Header: React.FC<Props> = ({className, classLogo}) => {
                  <Link to="/projects">Projetos</Link> 
                 </li>
                 <li>
-                 <Link to="/">Contato</Link> 
+                 <Link to="/playground">Contato</Link> 
                 </li>
             </ul>    
         </nav>
-        {/* <LinkedinLogo className="icon"/>
-        <GithubLogo className='icon' /> */}
     </header>
   );
 }

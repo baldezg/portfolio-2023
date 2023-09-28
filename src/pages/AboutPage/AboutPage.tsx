@@ -6,7 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ProjectThumb } from "../../components/projectThumb/ProjectThumb";
 import { Plus, LinkIcon, LinkedinLogo, GithubLogo } from "../../icons";
 
-const About: React.FC = () => {
+type Props = {
+  variants: object;
+}
+const About: React.FC<Props> = ({variants}) => {
   const [isOpen, setIsOpen] = useState("");
 
   const showDetails = (topic: string) => {
@@ -18,7 +21,10 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="wrapper">
+    <motion.div 
+    className="wrapper"
+    variants={{variants}}
+    >
       <main className="about">
         <motion.header
           className="about__header"
@@ -33,7 +39,10 @@ const About: React.FC = () => {
           </h2>
         </motion.header>
 
-        <div className="about__process">
+        <motion.div className="about__process"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}>
           <h3>Pensando no cliente em primeiro lugar</h3>
           <h3>e imbuído em oferecer produtos de alta qualidade.</h3>
           <h3>
@@ -41,8 +50,14 @@ const About: React.FC = () => {
             e UX design para atender suas expectativas{" "}
           </h3>
           <h3> e satisfazer nossos clientes!</h3>
-        </div>
-        <section className="about__projects">
+        </motion.div>
+        <motion.section
+        className="about__projects"
+        initial={{ opacity: 0, y: "50px" }}
+        whileInView={{ opacity: 1, y:0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
+        >
           <h3 className="projects__heading">Meu Trabalho</h3>
           <div className="projects__section">
             <ProjectThumb />
@@ -50,16 +65,21 @@ const About: React.FC = () => {
               Landign page para serviços de TI.
             </h4>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="about__skills">
+        <motion.section className="about__skills"
+        initial={{ opacity: 0, y: "50px" }}
+        whileInView={{ opacity: 1, y:0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
+        >
           <h3>Minhas Habilidades</h3>
           <div className="skills__topic">
             <h4>Desenvolvimento web</h4>
             <button
               onClick={() => showDetails("development")}
               className="topic__info"
-            >
+              >
               <Plus className="icon" />
             </button>
           </div>
@@ -91,7 +111,7 @@ const About: React.FC = () => {
             </ul>
           )}
           <hr />
-        </section>
+        </motion.section>
         <div className="link__box">
           <a href={resume} target="_blank" rel="noopener noreferrer">
             Visualize meu currículo
@@ -107,7 +127,7 @@ const About: React.FC = () => {
         </section>
         <h3 className="thanks">Obrigado por chegar até aqui!</h3>
       </main>
-    </div>
+    </motion.div>
   );
 };
 
