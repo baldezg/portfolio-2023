@@ -5,11 +5,23 @@ import resume from "../../assets/resume/resume.pdf";
 import { AnimatePresence, motion } from "framer-motion";
 import { ProjectThumb } from "../../components/projectThumb/ProjectThumb";
 import { Plus, LinkIcon, LinkedinLogo, GithubLogo } from "../../icons";
+import SkillsList from "../../components/skillsList/SkillsList";
+
+const designSkills = ["Figma", "Adobe XD"];
+const developmentSkills = [
+  "Lógica de Programação",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "HTML",
+  "CSS",
+  "Git",
+];
 
 type Props = {
   variants: object;
-}
-const About: React.FC<Props> = ({variants}) => {
+};
+const About: React.FC<Props> = ({ variants }) => {
   const [isOpen, setIsOpen] = useState("");
 
   const showDetails = (topic: string) => {
@@ -21,10 +33,7 @@ const About: React.FC<Props> = ({variants}) => {
   };
 
   return (
-    <motion.div 
-    className="wrapper"
-    variants={{variants}}
-    >
+    <motion.div className="wrapper" variants={{ variants }}>
       <main className="about">
         <motion.header
           className="about__header"
@@ -39,10 +48,12 @@ const About: React.FC<Props> = ({variants}) => {
           </h2>
         </motion.header>
 
-        <motion.div className="about__process"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}>
+        <motion.div
+          className="about__process"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        >
           <h3>Pensando no cliente em primeiro lugar</h3>
           <h3>e imbuído em oferecer produtos de alta qualidade.</h3>
           <h3>
@@ -52,11 +63,11 @@ const About: React.FC<Props> = ({variants}) => {
           <h3> e satisfazer nossos clientes!</h3>
         </motion.div>
         <motion.section
-        className="about__projects"
-        initial={{ opacity: 0, y: "50px" }}
-        whileInView={{ opacity: 1, y:0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.8 }}
+          className="about__projects"
+          initial={{ opacity: 0, y: "50px" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.8 }}
         >
           <h3 className="projects__heading">Meu Trabalho</h3>
           <div className="projects__section">
@@ -67,49 +78,39 @@ const About: React.FC<Props> = ({variants}) => {
           </div>
         </motion.section>
 
-        <motion.section className="about__skills"
-        initial={{ opacity: 0, y: "50px" }}
-        whileInView={{ opacity: 1, y:0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.8 }}
+        <motion.section
+          className="about__skills"
+          initial={{ opacity: 0, y: "50px" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.8 }}
         >
           <h3>Minhas Habilidades</h3>
-          <div className="skills__topic">
+          <button
+            onClick={() => showDetails("development")}
+            className="skills__topic"
+          >
             <h4>Desenvolvimento web</h4>
-            <button
-              onClick={() => showDetails("development")}
-              className="topic__info"
-              >
+            <button className="topic__info">
               <Plus className="icon" />
             </button>
-          </div>
-          {isOpen === "development" && (
-            <ul className="list__skills">
-              <li>Lógica de Programação</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Git</li>
-            </ul>
-          )}
+          </button>
+          <AnimatePresence>
+            {isOpen === "development" && (
+              <SkillsList list={developmentSkills} />
+            )}
+          </AnimatePresence>
           <hr />
-          <div className="skills__topic">
+          <button
+            onClick={() => showDetails("design")}
+            className="skills__topic"
+          >
             <h4>UI/UX Design</h4>
-            <button
-              onClick={() => showDetails("design")}
-              className="topic__info"
-            >
+            <button className="topic__info">
               <Plus className="icon" />
             </button>
-          </div>
-          {isOpen === "design" && (
-            <ul className="list__skills">
-              <li>Figma</li>
-              <li>Adobe XD</li>
-            </ul>
-          )}
+          </button>
+          {isOpen === "design" && <SkillsList list={designSkills} />}
           <hr />
         </motion.section>
         <div className="link__box">

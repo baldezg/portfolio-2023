@@ -9,7 +9,9 @@ type Props = {
 const Header: React.FC<Props> = ({className, classLogo}) => {
   return (
       <header className={className}>
-        <img className={classLogo} src={logo} alt="logo"/>
+        <Link to='/'>
+          <img className={classLogo} src={logo} alt="logo"/>
+        </Link>
         <nav>
             <ul>
                 <li>

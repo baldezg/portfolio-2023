@@ -3,13 +3,11 @@
   justify-content: space-evenly;
   padding: 2rem;
 }
-
 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
-  
 }
 .presentation__name {
   color: var(--black);
@@ -32,7 +30,6 @@ h2 span{
 .vector {
   height: 100%;
 }
-
 .button__container{
   display: flex;
   align-items: center;
@@ -85,7 +82,19 @@ h2 span{
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-
+  
+}
+.social__logo{
+  box-shadow:
+  rgba(0, 0, 0, 0.1) 0 4px 4px,
+  rgba(0, 0, 0, 0.1) 0 2px 2px,
+  rgba(0, 0, 0, 0.1) 0 8px 8px,
+  rgba(0, 0, 0, 0.1) 0 16px 16px,
+  rgba(0, 0, 0, 0.1) 0 32px 32px,
+  rgba(0, 0, 0, 0.1) 0 64px 64px
+  ;
+  border-radius: 50%;
+  background-color: transparent !important; 
 }
 .social__logo svg{
   height: var(--icon-big);

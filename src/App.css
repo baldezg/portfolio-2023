@@ -54,7 +54,6 @@
 }
 html {
   scroll-behavior: smooth;
-  
 }
 body {
   background: var(--bg);
@@ -66,19 +65,4 @@ a{
 }
 
 
-/* =============================PLAYGROUND====================== */
 
-
-.parallax-element {
-  width: 100%;
-  height: 100vh;
-  background-color: #f0f0f0; /* Ajuste a cor conforme necessário */
-  
-}
-.two{
-  background-color: #0f0f0f;
-}
-
-.three{
-  background-color: red;
-}

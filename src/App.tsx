@@ -5,12 +5,10 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import About from './pages/AboutPage/AboutPage';
-
-import Skills from './pages/skills';
 import HomePage from './pages/Home/HomePage';
 import  ProjectPage from './pages/ProjectPage/ProjectPage';
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import {ParallaxEffect} from './playground'
 
 const App: React.FC = () => {
@@ -34,7 +32,6 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About variants={routeVariants}/>} />
             <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/skills" element={<Skills />} />
             <Route path="/playground" element={<ParallaxEffect />} />
         </Routes>
       </AnimatePresence>

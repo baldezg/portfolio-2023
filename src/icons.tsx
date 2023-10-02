@@ -36,7 +36,6 @@ export const GithubLogo: React.FC<IconProps> = ({ className }) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        // xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 496 512"
       >
         <path
@@ -53,7 +52,6 @@ export const Envelope: React.FC<IconProps> = ({ className }) => {
     <Link to="/contact" className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        // xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 24 24"
       >
         <path
