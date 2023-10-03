@@ -1,0 +1,9 @@
+.list__skills {
+    padding-bottom: 2rem;
+    display: flex;
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+  .list__skills li {
+    font-size: 1.5rem;
+  }

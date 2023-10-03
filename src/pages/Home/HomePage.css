@@ -81,8 +81,7 @@ h2 span{
   align-self: flex-end;
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
-  
+  gap: 1rem; 
 }
 .social__logo{
   box-shadow:
@@ -93,14 +92,13 @@ h2 span{
   rgba(0, 0, 0, 0.1) 0 32px 32px,
   rgba(0, 0, 0, 0.1) 0 64px 64px
   ;
-  border-radius: 50%;
-  background-color: transparent !important; 
-}
-.social__logo svg{
   height: var(--icon-big);
   aspect-ratio: 1;
-  color: var(--black);
 }
+.github{
+  border-radius: 50%;
+}
+
 .presentation__whatIdo{
   color: var(--black);
   font-size: 2rem;

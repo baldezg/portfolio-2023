@@ -25,7 +25,7 @@ const  HomePage: React.FC = () => {
       </div>
     </main>
     <div className='socials'>
-      <GithubLogo className='social__logo' />
+      <GithubLogo className='social__logo github' />
       <LinkedinLogo className='social__logo' />
     </div>
   </section>

@@ -1,14 +1,16 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import './SkillsList.css';
+import { motion } from 'framer-motion';
 
 type Props = {
     list: string[];
+    key: string;
 }
-const SkillsList: React.FC<Props> = ({list}) => {
+const SkillsList: React.FC<Props> = ({list, key}) => {
     return(
         <motion.ul
         className="list__skills"
-        key="development"
+        key={key}
         initial={{height: 0}}
         animate={{ height: "auto" }}
         exit={{ height: 0 }}

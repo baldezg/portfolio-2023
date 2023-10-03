@@ -45,16 +45,6 @@
 .about__skills {
   padding: 2rem;
 }
-.list__skills {
-  padding-bottom: 2rem;
-  display: flex;
-  padding-top: 1rem;
-  overflow: hidden;
-  
-}
-.list__skills li {
-  font-size: 1.5rem;
-}
 .skills__topic {
   display: flex;
   justify-content: space-between;

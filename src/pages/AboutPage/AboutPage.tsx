@@ -4,8 +4,9 @@ import resume from "../../assets/resume/resume.pdf";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ProjectThumb } from "../../components/projectThumb/ProjectThumb";
-import { Plus, LinkIcon, LinkedinLogo, GithubLogo } from "../../icons";
+import { LinkIcon, LinkedinLogo, GithubLogo } from "../../icons";
 import SkillsList from "../../components/skillsList/SkillsList";
+import SkillsTopic from "../../components/skillsTopic/SkillsTopic";
 
 const designSkills = ["Figma", "Adobe XD"];
 const developmentSkills = [
@@ -86,31 +87,20 @@ const About: React.FC<Props> = ({ variants }) => {
           viewport={{ once: true, amount: 0.8 }}
         >
           <h3>Minhas Habilidades</h3>
-          <button
-            onClick={() => showDetails("development")}
-            className="skills__topic"
-          >
-            <h4>Desenvolvimento web</h4>
-            <button className="topic__info">
-              <Plus className="icon" />
-            </button>
-          </button>
+          <SkillsTopic
+            fnc={() => showDetails("development")}
+            title="Desenvolvimento web"
+          />
           <AnimatePresence>
             {isOpen === "development" && (
-              <SkillsList list={developmentSkills} />
+              <SkillsList list={developmentSkills} key="development" />
             )}
           </AnimatePresence>
           <hr />
-          <button
-            onClick={() => showDetails("design")}
-            className="skills__topic"
-          >
-            <h4>UI/UX Design</h4>
-            <button className="topic__info">
-              <Plus className="icon" />
-            </button>
-          </button>
-          {isOpen === "design" && <SkillsList list={designSkills} />}
+          <SkillsTopic fnc={() => showDetails("design")} title="UI/UX Design" />
+          {isOpen === "design" && (
+            <SkillsList list={designSkills} key="design" />
+          )}
           <hr />
         </motion.section>
         <div className="link__box">

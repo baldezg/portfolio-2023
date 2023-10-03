@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 .thumbnail__link{
     background: var(--bg);
