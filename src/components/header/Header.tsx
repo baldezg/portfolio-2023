@@ -21,7 +21,7 @@ const Header: React.FC<Props> = ({className, classLogo}) => {
                  <Link to="/projects">Projetos</Link> 
                 </li>
                 <li>
-                 <Link to="/playground">Contato</Link> 
+                 <Link to="/contact">Contato</Link> 
                 </li>
             </ul>    
         </nav>

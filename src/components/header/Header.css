@@ -17,6 +17,7 @@ li:last-child a{
   background-color: var(--black);
   color: var(--bg);
   padding: .75rem 1.5rem;
+  transition: background-color .3s ease-out;
 }
 .logo{
   height: 50px;

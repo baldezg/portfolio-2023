@@ -1,0 +1,31 @@
+.form__heading {
+  font-size: 2.5rem;
+  padding: 1rem;
+  line-height: var(--line-height-heading);
+}
+.form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 60% 10%;
+}
+.form__field {
+}
+.form__input {
+  padding: 0.5rem;
+}
+.form__submit {
+  background-color: var(--black);
+  color: var(--bg);
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+  border: none;
+  line-height: var(--line-height-p);
+  font-size: var(--font-size-p-regular);
+  /* font-weight: bold; */
+}
+.form__submit:hover {
+  background-color: var(--bg);
+  color: var(--black);
+  outline: 2px solid var(--black);
+}
