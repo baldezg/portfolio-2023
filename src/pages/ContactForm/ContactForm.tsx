@@ -61,23 +61,23 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section>
+    <section className="form__section">
       <h1 className="form__heading">Como posso te ajudar?</h1>
 
       <form onSubmit={handleSubmit(sendEmail)} className="form">
         <div className="form__field">
-          <label>Nome</label>
+          <label className="label">Nome</label>
           <input {...register("name")} className="form__input" />
           <p>{errors.name?.message}</p>
         </div>
         <div className="form__field">
-          <label>Email</label>
+          <label className="label">Email</label>
           <input {...register("email")} className="form__input" />
           <p>{errors.email?.message}</p>
         </div>
-        <div>
-          <label>Escreva sua mensagem</label>
-          <textarea {...register("message")}></textarea>
+        <div className="form__field text-area">
+          <label className="label">Escreva sua mensagem</label>
+          <textarea {...register("message")} className="form__input message"></textarea>
           <p>{errors.message?.message}</p>
         </div>
         <input type="submit" className="form__submit" />
